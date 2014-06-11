@@ -13,8 +13,8 @@ function dispatch(req,res)
 		res.end("<html><header></header><body>The request path is not found</body></html>");
 	}
 
-	varl module=require(url_js.path_js[pathname]);
-	module.run(field);
+	var module=require(url_js.path_js[pathname]);
+	module.run(field,res);
 }
 
 exports.dispatch = dispatch;

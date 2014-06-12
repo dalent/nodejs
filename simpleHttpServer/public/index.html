@@ -22,6 +22,7 @@
         <ul>
             <li><A href="https://github.com/mleibman/SlickGrid/blob/gh-pages/examples/example1-simple.html" target="_sourcewindow"> View the source for this example on Github</a></li>
         </ul>
+		<button id="but" onclick="test()"> click </button>
     </td>
   </tr>
 </table>
@@ -33,6 +34,11 @@
 <script src="slick.grid.js"></script>
 
 <script>
+function test()
+{
+	var data=[];
+	$("#myGrid").hide();
+}
   var grid;
   var columns = [
     {id: "title", name: "Title", field: "title"},

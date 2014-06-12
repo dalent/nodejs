@@ -17,9 +17,9 @@ function run(field,res)
 	if(pathName == "/")
 		pathName="/index.html";
 	pathName = dir_prefix + pathName;
-	console.log(pathName);
+	console.log("load path:" + pathName);
     ext = path.extname(pathName),
-	fs.exists(pathName, function(exists)
+	path.exists(pathName, function(exists)
 	{
 		if(exists)
 	    {

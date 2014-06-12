@@ -7,13 +7,16 @@ function dispatch(req,res)
 	var pathname =field["pathname"];
 
 	console.log("path is :" + pathname);
-	if(url_js.path_js[pathname] === undefined)
+	var nodePath =url_js.path_js[pathname];
+	if(nodePath === undefined)
 	{
 		res.writeHead(404,{"content-type":"text/html"});
 		res.end("<html><header></header><body>The request path is not found</body></html>");
+		return;
 	}
 
-	var module=require(url_js.path_js[pathname]);
+	console.log(nodePath);
+	var module=require(nodePath);
 	module.run(field,res);
 }
 
